@@ -2,7 +2,7 @@
 
 This project demonstrates **LangGraph's fault tolerance mechanisms** through two patterns that handle different types of failures in LangGraph workflows.
 
-## Demo 1: Partial Failure with Pending Writes (`partial_failure_agent.py`)
+## Demo 1: Partial Failure with Pending Writes (`agents/partial_failure_agent.py`)
 
 Demonstrates how LangGraph handles **parallel execution failures** using pending writes.
 
@@ -16,7 +16,7 @@ When multiple nodes run in parallel, some may succeed while others fail. LangGra
 
 ### Agent Graph
 
-![Agent Architecture](fault_tolerance_agent.png)
+![Agent Architecture](assets/fault_tolerance_agent.png)
 
 *Figure 1: LangGraph fault tolerance workflow with parallel processing*
 
@@ -37,7 +37,7 @@ When multiple nodes run in parallel, some may succeed while others fail. LangGra
    - Workflow continues from convergence point
 6. **Final Response**: LLM provides complete analysis without re-doing expensive work
 
-## Demo 2: Retry Logic with Fallbacks (`retry_agent.py`)
+## Demo 2: Retry Logic with Fallbacks (`agents/retry_agent.py`)
 
 Demonstrates **different retry strategies** for unreliable operations with progressive fallback approaches.
 
@@ -51,7 +51,7 @@ Handles operations that fail intermittently (API timeouts, service unavailabilit
 
 ### Agent Graph
 
-![Agent Architecture](retry_agent.png)
+![Agent Architecture](assets/retry_agent.png)
 
 *Figure 2: LangGraph retry workflow with various retry strategies*
 
@@ -86,23 +86,6 @@ class State(TypedDict):
 - **SQLite-based persistence** preserves state across failures
 - **Unique thread IDs** isolate different execution contexts
 - **Pending writes** stored separately until all parallel nodes complete
-
-## Running the Demos
-
-```bash
-# Set up environment
-uv venv
-uv pip install -r requirements.txt
-
-# Set environment variables
-OPENAI_API_KEY=""
-
-# Run partial failure demo
-python partial_failure_agent.py
-
-# Run retry logic demo  
-python retry_agent.py
-```
 
 ## Real-World Applications
 
