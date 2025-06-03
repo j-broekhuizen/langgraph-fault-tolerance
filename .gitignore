@@ -1,3 +1,7 @@
 .env
-checkpoints.*
+*.db
 *.ipynb
+.DS_Store
+checkpoints.*
+retry_checkpoints.*
+retry_checkpoints.db
