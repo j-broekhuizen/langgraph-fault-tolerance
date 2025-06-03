@@ -68,9 +68,10 @@ class State(TypedDict):
 
 
 def load_finance_data() -> dict:
-    """Read finance_data.json located next to this file."""
+    """Read finance_data.json from the data directory."""
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    with open(os.path.join(current_dir, "finance_data.json"), "r") as f:
+    data_path = os.path.join(os.path.dirname(current_dir), "data", "finance_data.json")
+    with open(data_path, "r") as f:
         return json.load(f)
 
 
