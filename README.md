@@ -2,14 +2,6 @@
 
 This project demonstrates **LangGraph's fault tolerance mechanisms** through two patterns that handle different types of failures in LangGraph workflows.
 
-## Overview
-
-LangGraph provides robust fault tolerance through:
-- **Pending writes** for partial failures in parallel execution
-- **Retry logic with fallbacks** for unreliable operations
-- **State checkpointing** to preserve progress across failures
-- **Intelligent routing** to handle different failure scenarios
-
 ## Demo 1: Partial Failure with Pending Writes (`partial_failure_agent.py`)
 
 Demonstrates how LangGraph handles **parallel execution failures** using pending writes.
