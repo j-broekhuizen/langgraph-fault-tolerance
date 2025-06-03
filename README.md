@@ -89,4 +89,5 @@ This pattern is valuable for:
 ## Architecture
 
 ![Agent Architecture](agent_architecture.png)
+
 *Figure 1: LangGraph fault tolerance workflow with parallel processing*
