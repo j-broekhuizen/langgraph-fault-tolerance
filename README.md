@@ -125,9 +125,3 @@ python retry_agent.py
 - **LLM workflows**: Manage model failures and retries
 - **Database operations**: Recover from connection issues
 - **File processing**: Handle temporary I/O failures
-
-## Architecture
-
-![Agent Architecture](agent_architecture.png)
-
-*Figure 1: LangGraph fault tolerance workflow with parallel processing*
