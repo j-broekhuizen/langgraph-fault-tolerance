@@ -25,14 +25,14 @@ When multiple nodes run in parallel, some may succeed while others fail. LangGra
 1. **Initial Request**: User asks to "Analyze top 3 contracts and multiply largest by π"
 2. **Tool Execution**: LLM calls `get_finance_data` to retrieve contract information
 3. **Parallel Processing**: Two nodes run simultaneously:
-   - `data_preprocessor`: ✅ Always succeeds, writes preprocessing results
-   - `result_analyzer`: ❌ Fails on first attempt (simulated)
+   - `data_preprocessor`: Always succeeds, writes preprocessing results
+   - `result_analyzer`: Fails on first attempt (simulated)
 4. **Fault Tolerance Activates**: 
    - LangGraph detects partial failure
    - Saves `data_preprocessor`'s successful write as "pending"
    - Creates checkpoint without losing work
 5. **Resume & Recovery**:
-   - Only `result_analyzer` re-runs (✅ succeeds this time)
+   - Only `result_analyzer` re-runs (succeeds this time)
    - Pending write from `data_preprocessor` is merged with new write
    - Workflow continues from convergence point
 6. **Final Response**: LLM provides complete analysis without re-doing expensive work
