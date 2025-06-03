@@ -54,7 +54,9 @@ def merge_dicts(left: dict, right: dict) -> dict:
     return {**left, **right}  # Merges dictionaries safely
 
 class State(TypedDict):
-    intermediate_results: Annotated[dict, merge_dicts]  # Uses reducer
+    messages: Annotated[list[AnyMessage], add_messages] # Uses add_messages reducer
+    ...
+    intermediate_results: Annotated[dict, merge_dicts]  # Uses merge_dicts reducer
 ```
 
 ### Checkpointing
