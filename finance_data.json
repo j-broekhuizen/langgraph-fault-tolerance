@@ -1,0 +1,68 @@
+{
+    "contracts": [
+        {
+            "company": "TechCorp Industries",
+            "contract_amount": 2500000,
+            "contract_length": 36,
+            "renewal_date": "2025-08-15",
+            "contract_type": "Software Development",
+            "status": "Active"
+        },
+        {
+            "company": "Global Manufacturing Co",
+            "contract_amount": 4200000,
+            "contract_length": 24,
+            "renewal_date": "2025-03-10",
+            "contract_type": "Supply Chain Management",
+            "status": "Active"
+        },
+        {
+            "company": "DataStream Analytics",
+            "contract_amount": 1800000,
+            "contract_length": 18,
+            "renewal_date": "2024-12-01",
+            "contract_type": "Data Analytics",
+            "status": "Active"
+        },
+        {
+            "company": "CloudScale Solutions",
+            "contract_amount": 3100000,
+            "contract_length": 30,
+            "renewal_date": "2025-06-20",
+            "contract_type": "Cloud Infrastructure",
+            "status": "Active"
+        },
+        {
+            "company": "SecureNet Services",
+            "contract_amount": 950000,
+            "contract_length": 12,
+            "renewal_date": "2024-11-05",
+            "contract_type": "Cybersecurity",
+            "status": "Active"
+        },
+        {
+            "company": "Innovation Labs",
+            "contract_amount": 1500000,
+            "contract_length": 20,
+            "renewal_date": "2025-01-15",
+            "contract_type": "R&D Services",
+            "status": "Active"
+        },
+        {
+            "company": "Enterprise Solutions Inc",
+            "contract_amount": 2800000,
+            "contract_length": 42,
+            "renewal_date": "2025-09-30",
+            "contract_type": "Enterprise Software",
+            "status": "Active"
+        },
+        {
+            "company": "Digital Transform Partners",
+            "contract_amount": 2200000,
+            "contract_length": 24,
+            "renewal_date": "2025-04-12",
+            "contract_type": "Digital Transformation",
+            "status": "Active"
+        }
+    ]
+}
