@@ -22,15 +22,11 @@ When multiple nodes run in parallel, some may succeed while others fail. LangGra
 - **Atomic state updates** - All writes are applied together using reducer functions
 - **No lost progress** - Expensive operations (LLM calls, API requests) aren't repeated
 
-### Architecture Flow
+### Agent Graph
 
-```
-START → finance_assistant → tool_execution → [data_preprocessor ✅, result_analyzer ❌] 
-                    ↑                               ↓
-                    └── convergence_node ← ─────────┘
-                    ↓
-                   END
-```
+![Agent Architecture](fault_tolerance_agent.png)
+
+*Figure 1: LangGraph fault tolerance workflow with parallel processing*
 
 ### Execution Sequence:
 
@@ -61,15 +57,11 @@ Handles operations that fail intermittently (API timeouts, service unavailabilit
 - **Graceful degradation** - Continue workflow even when processing fails
 - **User communication** - Clear status updates about processing outcome
 
-### Architecture Flow
+### Agent Graph
 
-```
-START → data_preparation → unreliable_processor ←→ retry_logic
-                                   ↓                    ↓
-                              response_generator ←──────┘
-                                   ↓
-                                 END
-```
+![Agent Architecture](retry_agent.png)
+
+*Figure 2: LangGraph retry workflow with various retry strategies*
 
 ### Retry Strategy Tiers:
 
